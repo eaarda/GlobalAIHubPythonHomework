@@ -10,7 +10,7 @@ def getValues():
 
 def printValues(list):
     for i in range(0, 5):
-        print(f'{i+1}st value: {list[i]} and type: {type(list[i])} ')
+        print(f'{i+1}. value: {list[i]} and type: {type(list[i])} ')
 
 
 def main():
