@@ -7,7 +7,7 @@ def playGame():
              'abap', 'php', 'ruby', 'dart', 'scala', 'haskell', 'julia', 'matlab',
              'pascal', 'pearl', 'rust', 'sql']
     word = random.choice(words)
-    # print(word)
+    print(word)
     count = 5
     guesses = []
     x = len(word)
@@ -28,10 +28,14 @@ def playGame():
             for i in range(len(word)):
                 if guess == word[i]:
                     temp[i] = guess
-                    guesses.append(guess)
                     print(' '.join(temp), end='\n')
+                    if guess in guesses:
+                        print("Please enter different letter")
+                    else:
+                        guesses.append(guess)
+                        print("xxx",guesses)
 
-                    if len(guesses) == len(word):
+                    if '_' not in temp:
                         print(f"Congratulations!!!")
                         menu()
 
